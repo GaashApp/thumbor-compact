@@ -7,10 +7,10 @@ VOLUME /data
 # base OS packages
 RUN  \
     # awk '$1 ~ "^deb" { $3 = $3 "-backports"; print; exit }' /etc/apt/sources.list > /etc/apt/sources.list.d/backports.list && \
-    apt update && \
-    apt -y upgrade && \
-    apt -y autoremove && \
-    apt install -y -q \
+    apt-get update && \
+    apt-get -y upgrade && \
+    apt-get -y autoremove && \
+    apt-get install -y -q \
         git \
         curl \
         libjpeg-turbo-progs \
@@ -24,7 +24,7 @@ RUN  \
         libmemcached-dev \
         gifsicle \
         ffmpeg && \
-    apt clean
+    apt-get clean
 
 ENV HOME /app
 ENV SHELL bash
