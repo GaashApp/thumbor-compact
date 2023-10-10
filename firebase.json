@@ -1,0 +1,11 @@
+{
+    "hosting": {
+      "rewrites": [{
+        "source": "**",
+        "run": {
+          "serviceId": "thumbor-service",
+          "region": ":asia-south2"
+        }
+      }]
+    }
+  }
