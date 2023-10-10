@@ -7,7 +7,7 @@ VOLUME /data
 # base OS packages
 RUN  \
     awk '$1 ~ "^deb" { $3 = $3 "-backports"; print; exit }' /etc/apt/sources.list > /etc/apt/sources.list.d/backports.list && \
-    apt update && \
+    # apt update && \
     apt -y upgrade && \
     apt -y autoremove && \
     apt install -y -q \
