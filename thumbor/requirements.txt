@@ -13,4 +13,4 @@ tc-aws==7.0.2
 tc-core==0.5
 thumbor==7.5.0
 thumbor-wand-engine==0.1.1
-thumbor-cloud-storage
+thumbor-gcs

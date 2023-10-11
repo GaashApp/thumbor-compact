@@ -35,6 +35,7 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install --trusted-host None --no-cache-dir -r /app/requirements.txt
 
 COPY conf/thumbor.conf.tpl /app/thumbor.conf.tpl
+# COPY custom_gcs_loader.py /usr/local/lib/python3.11/site-packages/custom_gcs/custom_gcs_loader.py
 
 ARG SIMD_LEVEL
 

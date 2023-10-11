@@ -1,11 +1,14 @@
 {
-    "hosting": {
-      "rewrites": [{
+  "hosting": {
+    "site": "gaash-image",
+    "rewrites": [
+      {
         "source": "**",
         "run": {
           "serviceId": "thumbor-service",
-          "region": ":asia-south2"
+          "region": "asia-south2"
         }
-      }]
-    }
+      }
+    ]
   }
+}
